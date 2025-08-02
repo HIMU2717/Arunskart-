@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wishlist - ARUNSKART</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar/Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">ARUNSKART</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Wishlist Section -->
+  <section class="wishlist">
+    <div class="container">
+      <h2>Your Wishlist</h2>
+      <div id="wishlist-items" class="wishlist-items">
+        <!-- Wishlist items will appear here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 ARUNSKART. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Wishlist Logic
+    const wishlistItemsContainer = document.getElementById('wishlist-items');
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    function renderWishlist() {
+      wishlistItemsContainer.innerHTML = '';
+      if (wishlist.length === 0) {
+        wishlistItemsContainer.innerHTML = '<p>Your wishlist is empty.</p>';
+        return;
+      }
+
+      wishlist.forEach((item, index) => {
+        wishlistItemsContainer.innerHTML += `
+          <div class="wishlist-item">
+            <h3>${item.title}</h3>
+            <p>Price: ₹${item.price}</p>
+            <button class="btn-remove" onclick="removeWishlistItem(${index})">Remove</button>
+          </div>
+        `;
+      });
+    }
+
+    function removeWishlistItem(index) {
+      wishlist.splice(index, 1);
+      localStorage.setItem('wishlist', JSON.stringify(wishlist));
+      renderWishlist();
+    }
+
+    renderWishlist();
+  </script>
+
+</body>
+</html>
