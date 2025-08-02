@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ARUNSKART - Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARUNSKART</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="header">
+  <header>
     <div class="logo">ARUNSKART</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="wishlist.html">Wishlist</a>
-      <a href="cart.html">Cart</a>
-      <a href="login.html">Login</a>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Cart</a>
+      <a href="#">Login</a>
     </nav>
   </header>
 
-  <!-- Hero Banner -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Biggest Sale of the Season!</h1>
-      <p>Shop your favourite brands at unbeatable prices</p>
-      <a href="shop.html" class="btn-primary">Explore Now</a>
+    <div class="hero-text">
+      <h1>Welcome to <br>ARUNSKART</h1>
+      <p>Discover the best deals on top brands and trends.</p>
+      <button>Shop Now</button>
     </div>
-    <div class="hero-image">
-      <img src="images/hero.png" alt="Hero Banner">
+    <div class="hero-img">
+      <img src="images/banner.jpg" alt="Banner Image">
     </div>
   </section>
 
-  <!-- Categories -->
   <section class="categories">
     <h2>Shop by Category</h2>
     <div class="category-grid">
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150?text=Electronics" alt="Electronics">
-        <h3>Electronics</h3>
+      <div><img src="images/men.jpg"><p>Men</p></div>
+      <div><img src="images/women.jpg"><p>Women</p></div>
+      <div><img src="images/kids.jpg"><p>Kids</p></div>
+      <div><img src="images/home.jpg"><p>Home</p></div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/shoe.jpg">
+        <p>Running Shoe</p>
+        <p>₹ 2999</p>
+        <button>Add to Cart</button>
       </div>
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150?text=Clothing" alt="Clothing">
-        <h3>Clothing</h3>
+      <div class="product-card">
+        <img src="images/shirt.jpg">
+        <p>Denim Shirt</p>
+        <p>₹ 1499</p>
+        <button>Add to Cart</button>
       </div>
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150?text=Beauty" alt="Beauty">
-        <h3>Beauty</h3>
+      <div class="product-card">
+        <img src="images/watch.jpg">
+        <p>Watch</p>
+        <p>₹ 6999</p>
+        <button>Add to Cart</button>
       </div>
-      <div class="category-card">
-        <img src="https://via.placeholder.com/200x150?text=Home+Appliances" alt="Home Appliances">
-        <h3>Home Appliances</h3>
+      <div class="product-card">
+        <img src="images/sunglasses.jpg">
+        <p>Sunglasses</p>
+        <p>₹ 1299</p>
+        <button>Add to Cart</button>
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>© 2025 ARUNSKART. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
